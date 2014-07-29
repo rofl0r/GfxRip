@@ -3,7 +3,7 @@
 CC=gcc
 LD=ld
 CFLAGS=-O
-FILES=../lib/libbgui.a ../lib/libbgui.so btest
+FILES=../lib/libbgui.a btest
 
 # Uncomment the line below to compile on other platforms than *nix.
 # FILES=../lib/libbgui.a btest
