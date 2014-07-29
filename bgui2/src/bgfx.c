@@ -10,7 +10,7 @@
 #include <ctype.h>
 #include <time.h>
 
-#include "allegro.h"
+#include <allegro.h>
 #include "tdgui.h"
 #include "binterna.h"
 
@@ -30,7 +30,7 @@ PALETTE bill_pal;
 int bill_appearexact = FALSE;
 
 //Unselected
-static unsigned char radio_unsel_data[144] =
+unsigned char radio_unsel_data[144] =
 {
  0, 0, 0, 0, 4, 4, 4, 4, 0, 0, 0, 0,
  0, 0, 4, 4, 5, 5, 5, 5, 4, 4, 0, 0,
@@ -47,7 +47,7 @@ static unsigned char radio_unsel_data[144] =
 };
 
 //Selected
-static unsigned char radio_sel_data[144] =
+unsigned char radio_sel_data[144] =
 {
  0, 0, 0, 0, 4, 4, 4, 4, 0, 0, 0, 0,
  0, 0, 4, 4, 5, 5, 5, 5, 4, 4, 0, 0,
@@ -64,7 +64,7 @@ static unsigned char radio_sel_data[144] =
 };
 
 //greyed
-static unsigned char radio_grey_data[144] =
+unsigned char radio_grey_data[144] =
 {
  0, 0, 0, 0, 4, 4, 4, 4, 0, 0, 0, 0,
  0, 0, 4, 4, 5, 5, 5, 5, 4, 4, 0, 0,
