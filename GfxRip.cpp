@@ -1,7 +1,7 @@
 // #define ALLEGRO_STATICLINK
 
 #include <allegro.h>
-#include <winalleg.h>
+#include "winalleg.h"
 #include "tdgui.h"
 #include <stdio.h>
 #include <string.h>
@@ -317,7 +317,7 @@ static BYTE *get_dib(BITMAP * bitmap)
    return pixels;
 }
 
-
+#if 0
 HBITMAP convert_bitmap_to_hbitmap2(BITMAP * bitmap)
 {
    HDC hdc;
@@ -347,8 +347,10 @@ HBITMAP convert_bitmap_to_hbitmap2(BITMAP * bitmap)
 
    return hbmp;
 }
+#endif
 
 void copyBitmapToClipboard(BITMAP *bmp) {
+#if 0
     if (OpenClipboard(win_get_window())) {
         if (EmptyClipboard()) {
             HBITMAP hbmp = convert_bitmap_to_hbitmap2(bmp);
@@ -360,6 +362,7 @@ void copyBitmapToClipboard(BITMAP *bmp) {
             }
         } 
     }
+#endif
 }
 
 void copy_to_clip()
@@ -885,7 +888,7 @@ int main(int argc, char *argv[])
 		return -1;
 	}
 	set_color_depth(8);
-	if(0 > set_gfx_mode(GFX_DIRECTX_WIN, scrW, scrH, 0, 0))
+	if(0 > set_gfx_mode(GFX_SAFE, scrW, scrH, 0, 0))
 	{
 		allegro_exit();
 		allegro_message("Error setting graphics mode.\nExiting");
