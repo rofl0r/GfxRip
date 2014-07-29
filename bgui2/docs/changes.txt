@@ -1,0 +1,94 @@
+THIS LIBRARY HAS BEEN RELEASED UNOFFICCALLY BY JASON WINNEBECK, PLEASE READ README!.TXT
+FOR MORE INFO.  This is the orginal version of the readme file and much does not apply.
+The new changes file is part of README!.TXT.
+
+changes in BGui release 1.0:
+
+- Fixed a little bug in billfs.c
+  with the alert box.
+
+- Cut calls to get_bill_color in
+  half in the TDBox routine.
+
+- BillCheck now responds to D_DISABLED
+  (Thanks Julien Audran!)
+
+- Fixed bug in BillWindow (it didn't check
+  if it's temp. bitmap was sucessfully
+  allocated)  (how stupid of me :-)
+
+- Added BillGroupBox (Thanks Julien Audran!)
+
+- Added Drop Down List (Thanks Julien Audran!)
+
+- Added progress bar.
+
+- Radio buttons are now square if the button's
+  d2 is 1.
+
+- As of this release, BGui no longer comes with
+  a precompiled version.  This was a stupid idea --
+  differences b/t Allegro versions caused the
+  precompiled one  to fail on many systems.  It
+  was a great way to get feedback (It doesn't work!)
+  messages from users, though :-)
+
+- Ripped bill_fade_bmp out of GenMedia (See my page)
+  for BGui.  It's like on the Win95 shutdown thing.
+
+changes in BGui releases 0 to .9:
+
+- Updated the graphics mode
+  selection dialog to reflect
+  the new drivers available in
+  WIP 25.
+
+- Updated the file selection
+  dialog to work better, like
+  the one in WIP 25 it now only
+  shows available drives.
+
+- The menu bug is now fixed.
+  Please let me know of any
+  more problems you find.
+
+- "Modularized" the files --
+  BGui is no longer just one
+  BIG file
+
+- Now you can use "MODE_EXACTWIN"
+  and "MODE_ALLEGCOMPAT" with
+  set_gui_mode.
+
+- BillButtons now respond to D_DISABLED
+  by making their text grey
+
+- Callback BillButtons no longer redraw
+  the entire dialog when the "pop up", they
+  just redraw themselves.
+
+- Scroll Bars now are "invisible" if they
+  have a d1 value of 0.  The do NOT respond
+  to D_HIDDEN.  They will no longer crash
+  with a d1 of 0.
+
+- I added a d_billscrollablebitmap_proc.
+
+- Johan J”nsson added a vertical 3D line.
+
+- Added the plain callback button.
+
+- The Sound Callback button works
+  now.
+
+- BGui now hides the mouse during
+  the drawing of ALL of the controls.
+  (I think :-)
+
+- BillWindows now respond to
+  MODE_EXACTWIN by making their
+  title bars larger. There is now
+  plenty of room to put a button
+  with an "X" on the title bar.
+
+- Created BMake.bat

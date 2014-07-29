@@ -1,0 +1,8 @@
+See readme.txt for general info, and docs/* for more info.
+See changes.txt for latest changes
+
+Compiling:
+*nix: sh fixunix.sh; cd src; make
+dos: fixdoswin.bat; cd src; make
+win: fixdoswin.bat; run the bgui2.dsw file, pick the configurations you want
+     and compile
