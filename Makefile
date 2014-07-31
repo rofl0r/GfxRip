@@ -1,9 +1,9 @@
-SRCS=GfxRip.cpp
+SRCS=GfxRip.c
 OBJS=GfxRip.o
 PROG=GfxRip
 LIBS=bgui2/lib/libbgui.a
 
-CXXFLAGS=-fpermissive
+CFLAGS=-std=c99
 
 -include config.mak
 
@@ -14,10 +14,10 @@ clean:
 	rm -f $(OBJS)
 
 $(PROG):  $(OBJS) $(LIBS)
-	$(CXX) -o $@ $^ -lalleg $(LDFLAGS)
+	$(CC) -o $@ $^ -lalleg $(LDFLAGS)
 
 %.o: %.cpp
-	$(CXX) $(INC) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
+	$(CC) $(INC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 
 $(LIBS):
 	make -C bgui2/src -f Makefile.unx

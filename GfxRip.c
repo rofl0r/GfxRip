@@ -5,6 +5,7 @@
 #include "tdgui.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 volatile int target_game_time = 0;
 
@@ -117,8 +118,9 @@ int getpixelcol(int pos, int x, int y)
 	int bit1;
 	int nn;
 	int bitn;
+	int i;
 
-	for (int i=0; i < 8; i++)
+	for (i=0; i < 8; i++)
 	{
 		bit[i]=false;
 	}
